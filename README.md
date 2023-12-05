@@ -14,11 +14,25 @@ Above is our test results boasting a measly 48% accuracy
 
 Dataset:
 To collect data we used the Google Earth Engine, a pruduct of goolge that allows for cloud computed exploration of the vast collection of satellite imagery. In specific we chose to use sentinel2 images because they gave us a high resolution of 10 meter pixels at a fairly high frequency of one image every 5-10 days. There were two main chalenges we encountered during data collection, cloud coverage and labeling.
-Sadly, coastlines are often some of the cloudiest places in the world which made it hard for us to collect a large enough dataset from individual surf spots. Filtering out all images with more than 0% cloud coverage left us with a pretty small dataset. 5 years of satellite images of Biarritz, a popular surf spot in France yielded just 45 cloudless images. Image labeling was done all by hand which proved to be a very time consuming and tedious job. This fourther limited the size of our dataset given the time constraintes of our project.
+Sadly, coastlines are often some of the cloudiest places in the world which made it hard for us to collect a large enough dataset from individual surf spots. Filtering out all images with more than 0% cloud coverage left us with a pretty small dataset. 5 years of satellite images of Biarritz, a popular surf spot in France yielded just 45 cloudless images. 
+
+Below is a code snippet of what we used to harvest cloudless image collections from Sentinel2 of our desired beaches.
+
+<img width="479" alt="Screen Shot 2023-12-05 at 3 29 01 PM" src="https://github.com/HenryWatson11/WaveDetectorInator3000/assets/152929762/87e3cedb-9737-4f1b-98c1-cf87e96ead47">
+
+Below is the visual parameter we used to isolate B2, B3, B4
+
+<img width="456" alt="Screen Shot 2023-12-05 at 3 31 12 PM" src="https://github.com/HenryWatson11/WaveDetectorInator3000/assets/152929762/bf7561bc-d8a8-4821-9ced-ab321ed46435">
+
+Image labeling was done all by hand which proved to be a very time consuming and tedious job. This fourther limited the size of our dataset given the time constraintes of our project. We used surfline archives search the wave heights at ddesired days based on their bouy measurments. Below is a snippet of Biarritz on December 19, 2021.
+
+<img width="400" alt="Screen Shot 2023-12-05 at 3 39 07 PM" src="https://github.com/HenryWatson11/WaveDetectorInator3000/assets/152929762/4821d41e-3440-4a0f-86f4-4fa34ff2c37d">
+
+below is the sentinel image from the same day labeled as 2-4 in our dataset.
 
 <img width="401" alt="Screen Shot 2023-12-05 at 1 24 57 AM" src="https://github.com/HenryWatson11/WaveDetectorInator3000/assets/152929762/d545251a-c636-437a-bfc3-4287b2074c11">
 
-Above is Biarritz on December 19 2021, Labeld as 2-4 feet
+
 
 Due to to the limited size of our Dataset the distribution of wave size made for an unfavorable training set. 
 <img width="400" alt="Screen Shot 2023-12-05 at 1 36 14 AM" src="https://github.com/HenryWatson11/WaveDetectorInator3000/assets/152929762/e32f5ed9-be2d-4b01-a615-b2bec9cde2c2">
