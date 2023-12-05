@@ -10,7 +10,8 @@ Satellite imagery provides a unique perspective on Earth's oceans, offering a we
 
 Dataset
 To collect data we used the Google Earth Engine, a pruduct of goolge that allows for cloud computed exploration of the vast collection of satellite imagery. In specific we chose to use sentinel2 images because they gave us a high resolution of 10 meter pixels at a fairly high frequency of one image every 5-10 days. There were two main chalenges we encountered during data collection, cloud coverage and labeling.
-Sadly, coastlines are often some of the cloudiest places in the world which made it hard for us to collect a large enough dataset from individual surf spots. Filtering out images with cloud coverage of 
+Sadly, coastlines are often some of the cloudiest places in the world which made it hard for us to collect a large enough dataset from individual surf spots. Filtering out all images with more than 0% cloud coverage left us with a pretty small dataset. 5 years of satellite images of Biarritz, a popular surf spot in France yielded just 45 cloudless images.
+
 
 Image Preprocessing: Prior to model training, satellite images undergo meticulous preprocessing, including resizing, normalization, and data augmentation. Fourthermore we flip each image inorder to double the size our dataset.
 
