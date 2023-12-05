@@ -24,13 +24,15 @@ Due to to the limited size of our Dataset the distribution of wave size made for
 <img width="400" alt="Screen Shot 2023-12-05 at 1 36 14 AM" src="https://github.com/HenryWatson11/WaveDetectorInator3000/assets/152929762/e32f5ed9-be2d-4b01-a615-b2bec9cde2c2">
 
 This resulted in our model overfitting to the 2-4 feet result as seen in our confusion matrix below.
+![confusion_matrix (1)](https://github.com/HenryWatson11/WaveDetectorInator3000/assets/152929762/97f03ce9-3a34-466e-9e61-6adec2586393)
 
 
 Image Preprocessing: Prior to model training, satellite images undergo meticulous preprocessing, including resizing, normalization, and data augmentation. Fourthermore we flip each image inorder to double the size our dataset.
-<img width="400" alt="Screen Shot 2023-12-05 at 11 00 33 AM" src="https://github.com/HenryWatson11/WaveDetectorInator3000/assets/152929762/3742fbd0-ca97-4560-9b1a-31ee6b96a3cf">
+<img width="700" alt="Screen Shot 2023-12-05 at 11 00 33 AM" src="https://github.com/HenryWatson11/WaveDetectorInator3000/assets/152929762/3742fbd0-ca97-4560-9b1a-31ee6b96a3cf">
 
 Key Takeaways:
-Throughout this project Tucker and I never really felt comfortable with where we were at. Using Google Earth Engine proved to be difficult from the start as it's a platform neither of us had ever used before. Furthermore we were both new to java script as well as how images were stored. It took us a long time to finally get a collection of images downloaded and we still needed to label them by hand. All in all, data collection was quite the eye opening experience as to why deep learning models can be so challenging to train. After all, our model failed to beat fifty percent accuracy due to a shortage of data.
+Throughout this project Tucker and I never really felt comfortable with where we were at. Using Google Earth Engine proved to be difficult from the start as it's a platform neither of us had ever used before. Furthermore we were both new to java script as well as how images were stored. It took us a long time to finally get a collection of images downloaded and we still needed to label them by hand. All in all, data collection was quite the eye opening experience as to why deep learning models can be so challenging to train. After all, our model failed to beat fifty percent accuracy due to a shortage of data. 
+In the code attatched you will se many of our unused snippets.
 
 
 
