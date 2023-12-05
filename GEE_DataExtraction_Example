@@ -1,0 +1,26 @@
+// Select Sentinel-2 image collection
+var collection = ee.ImageCollection("COPERNICUS/S2")
+  .filterBounds(geometry)
+  .filterDate('2000-1-1', '2023-12-3')
+  .filter(ee.Filter.lte('CLOUDY_PIXEL_PERCENTAGE',0))
+  .sort('system:time_start');
+  
+// Print the number of images in the collection
+print('Number of images in collection:', collection.size());
+
+var selectImage = ee.Image(collection.toList(collection.size()).get(44));
+print('Image Selected:', selectImage);
+
+// Display the first image in the collection
+var visParams = { bands: ['B4', 'B3', 'B2'], max: 3000 };
+Map.centerObject(geometry, 8);
+Map.addLayer(selectImage, visParams, 'First image');
+
+// Export the collection to Google Drive
+Export.image.toDrive({
+  image: selectImage.visualize(visParams),
+  description: '3_2023-10-10_Biarritz',
+  scale: 10,
+  region: geometry,
+  folder: 'Wave Detector Images'
+});
